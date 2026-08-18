@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "logo": "Farhadi.dev",
+    "about": "About",
+    "stack": "Stack",
+    "work": "Work",
+    "approach": "Approach",
+    "contact": "Contact",
+    "letsTalk": "Let's talk"
+  },
+  "hero": {
+    "role": "Frontend Developer",
+    "availability": "Available for work",
+    "title": {
+      "line1": "Hi, I'm Ahmadreza —",
+      "line2": "Front-end Developer",
+      "line3": "I build modern, responsive web experiences."
+    },
+    "description": "A frontend developer who enjoys shaping thoughtful user interfaces and interactive experiences with React and Next.js — using modern tooling and solid practices to build things that are both beautiful and fast.",
+    "viewProjects": "View projects",
+    "resume": "Resume",
+    "techStack": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
+  },
+  "about": {
+    "sectionLabel": "About",
+    "index": "01",
+    "title": {
+      "line1": "Interfaces first,",
+      "line2": "decoration second."
+    },
+    "paragraph1": "I'm Ahmadreza, a frontend developer who enjoys designing clean interfaces and interactive experiences. I build sites and apps using current technologies and established best practices — aiming for work that's not only good-looking, but genuinely performant.",
+    "paragraph2": "I care about the details that are easy to skip: consistent spacing, predictable state, components that don't repeat themselves. I'm always picking up new tools and sharpening the ones I already use.",
+    "info": {
+      "basedIn": {
+        "label": "Based in",
+        "value": "Iran"
+      },
+      "focus": {
+        "label": "Focus",
+        "value": "React & Next.js"
+      },
+      "styling": {
+        "label": "Styling",
+        "value": "Tailwind CSS"
+      },
+      "currently": {
+        "label": "Currently",
+        "value": "Open to work"
+      }
+    }
+  },
+  "stack": {
+    "sectionLabel": "Tech stack",
+    "index": "02",
+    "title": "Tools I reach for, and how comfortable I am with them.",
+    "categories": {
+      "Frontend": "Frontend",
+      "Animation": "Animation",
+      "Tools": "Tools"
+    }
+  },
+  "work": {
+    "sectionLabel": "Selected work",
+    "index": "03",
+    "title": "Projects.",
+    "allRepositories": "All repositories",
+    "projects": {
+      "1gramtala": {
+        "name": "1gramtala",
+        "description": "A gold & jewelry e-commerce site with a refined product presentation layer."
+      },
+      "Zarmava": {
+        "name": "Zarmava",
+        "description": "A gold & jewelry showroom site with a refined product presentation layer."
+      },
+      "Dana Smart": {
+        "name": "Dana Smart",
+        "description": "An online course platform focused on clear browsing and enrollment flows."
+      },
+      "Shan Loray": {
+        "name": "Shan Loray",
+        "description": "A cosmetics e-commerce storefront built for catalog browsing at scale."
+      },
+      "Crypto Tracker": {
+        "name": "Crypto Tracker",
+        "description": "A responsive live cryptocurrency dashboard powered by GraphQL."
+      },
+      "Library": {
+        "name": "Library",
+        "description": "A modern, responsive digital library interface."
+      },
+      "Weather": {
+        "name": "Weather",
+        "description": "A lightweight weather lookup app built with React.js."
+      },
+      "ShadCn Dashboard": {
+        "name": "ShadCn Dashboard",
+        "description": "A dashboard interface built with ShadCN UI components and Next.js."
+      }
+    }
+  },
+  "approach": {
+    "sectionLabel": "How I work",
+    "index": "04",
+    "title": "A consistent process, applied to every build.",
+    "steps": {
+      "01": {
+        "number": "01",
+        "title": "Understand",
+        "text": "First, I figure out exactly what the interface needs to do, then I focus on how to design and build it."
+      },
+      "02": {
+        "number": "02",
+        "title": "Structure",
+        "text": "First, I define the data and component structure so the UI is built on a solid and reliable foundation."
+      },
+      "03": {
+        "number": "03",
+        "title": "Build",
+        "text": "I break the work down into small, manageable steps; I separate components early, keep the logic separate from the UI, and keep the styling clean and easy to maintain."
+      },
+      "04": {
+        "number": "04",
+        "title": "Refine",
+        "text": "Once the main structure is in place, I focus on the details like spacing, animations, and the little things that make the biggest difference."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "index": "05",
+    "title": {
+      "line1": "Have a project in mind?",
+      "line2": "Let's build something useful."
+    },
+    "telegram": "Telegram"
+  },
+  "footer": {
+    "copyright": "Built with Next.js & Tailwind CSS."
+  },
+  "code": {
+    "fileName": "AboutMe.ts",
+    "lines": [
+      "const developer = {",
+      "  name: 'Ahmadreza Farhadi',",
+      "  role: 'Frontend Developer',",
+      "  stack: ['React', 'Next.js', 'TypeScript'],",
+      "  focus: 'Building modern, responsive websites',",
+      "};"
+    ]
+  }
+}
