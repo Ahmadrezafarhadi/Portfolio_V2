@@ -16,14 +16,35 @@ import {
   X,
   ChevronRight,
   FileDown,
+  Layers,
+  Zap,
+  Palette,
+  Globe,
+  Sparkles,
 } from "lucide-react";
 import { FaLinkedin as LinkedinIcon, FaGithub as Github } from "react-icons/fa";
+import {
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiVuedotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiPrisma,
+  SiRedux,
+  SiTailwindcss,
+  SiGit,
+  SiSwagger,
+  SiVite,
+} from "react-icons/si";
 import Image from "next/image";
 import { useLanguage } from "../app/context/LanguageContext";
 import { LanguageSwitcher } from "../app/components/LanguageSwitcher";
-
-
-
 
 const NAME = "Ahmadreza Farhadi";
 
@@ -32,48 +53,44 @@ const SOCIALS = {
   linkedin: "https://linkedin.com/in/ahmadrezafarhadi",
   telegram: "https://t.me/ahmadr_farhadi",
   email: "ahmadfarhadi051@gmail.com",
-  resume: "https://cvbuilder.me/Resume/fa/7b6acebf-67d3-42bd-a034-e8f9196035df?template=Template31",
+  resume:
+    "https://cvbuilder.me/Resume/fa/7b6acebf-67d3-42bd-a034-e8f9196035df?template=Template31",
 };
 
 const NAV_IDS = ["about", "stack", "work", "approach", "contact"];
 
 const SKILLS = {
   Frontend: [
-    { name: "HTML5", level: 90 },
-    { name: "CSS3", level: 90 },
-    { name: "JavaScript (ES6+)", level: 90 },
-    { name: "React.js", level: 90 },
-    { name: "Next.js", level: 80 },
-    { name: "TypeScript", level: 80 },
-    { name: "Vue.js", level: 40 },
+    { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
+    { name: "CSS3", icon: SiCss, color: "text-blue-500" },
+    { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+    { name: "React.js", icon: SiReact, color: "text-cyan-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+    { name: "Vue.js", icon: SiVuedotjs, color: "text-emerald-500" },
   ],
-
   Backend_Database: [
-    { name: "Node.js", level: 40 },
-    { name: "Express.js", level: 30 },
-    { name: "REST API", level: 50 },
-    { name: "MySQL", level: 60 },
-    { name: "MongoDB", level: 70 },
-    { name: "Prisma", level: 40 },
+    { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+    { name: "Express.js", icon: SiExpress, color: "text-zinc-200" },
+    { name: "REST API", icon: Globe, color: "text-violet-400" },
+    { name: "MySQL", icon: SiMysql, color: "text-blue-400" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "Prisma", icon: SiPrisma, color: "text-cyan-500" },
   ],
-
   State_Management: [
-    { name: "Redux Toolkit", level: 70 },
-    { name: "Zustand", level: 60 },
-    { name: "SWR", level: 60 },
+    { name: "Redux Toolkit", icon: SiRedux, color: "text-purple-600" },
+    { name: "Zustand", icon: Layers, color: "text-pink-400" },
+    { name: "SWR", icon: Zap, color: "text-yellow-500" },
   ],
-
-
   UI_Animation: [
-    { name: "Tailwind CSS", level: 90 },
-    { name: "Shadcn UI", level: 90 },
-    { name: "Framer Motion", level: 80 },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
+    { name: "Shadcn UI", icon: Palette, color: "text-zinc-200" },
+    { name: "Framer Motion", icon: Sparkles, color: "text-violet-400" },
   ],
-
   Tools: [
-    { name: "Git & GitHub", level: 85 },
-    { name: "Swagger / OpenAPI", level: 30 },
-    { name: "Vite", level: 80 },
+    { name: "Git & GitHub", icon: SiGit, color: "text-orange-600" },
+    { name: "Swagger", icon: SiSwagger, color: "text-green-500" },
+    { name: "Vite", icon: SiVite, color: "text-yellow-400" },
   ],
 };
 
@@ -130,9 +147,7 @@ const PROJECTS = [
   },
 ];
 
-
-// UTILITIES 
-
+// UTILITIES
 
 function useActiveSection(ids: string[]) {
   const [active, setActive] = useState(ids[0]);
@@ -180,7 +195,6 @@ const fadeUp: Variants = {
   },
 };
 
-
 function SectionLabel({
   index,
   children,
@@ -222,7 +236,10 @@ function TypedCodeCard({ reducedMotion }: { reducedMotion: boolean }) {
   }, [visibleLines, reducedMotion, CODE_LINES.length]);
 
   return (
-    <div dir="ltr" className="relative rounded-xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-sm shadow-2xl shadow-black/40 overflow-hidden">
+    <div
+      dir="ltr"
+      className="relative rounded-xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-sm shadow-2xl shadow-black/40 overflow-hidden"
+    >
       <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-zinc-900/80">
         <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
         <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
@@ -325,7 +342,6 @@ function ProjectCard({
     </motion.a>
   );
 }
-
 
 // Main
 
@@ -735,7 +751,6 @@ export default function Portfolio() {
         </section>
 
         {/* Tech Stack */}
-        {/* Tech Stack */}
         <section
           id="stack"
           className="px-6 py-28 border-t border-zinc-900 bg-zinc-950"
@@ -756,79 +771,59 @@ export default function Portfolio() {
             </div>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
-              {Object.entries(SKILLS).map(([group, items]) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(SKILLS).map(([group, items], groupIndex) => (
                 <motion.div
                   key={group}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{
-                    once: true,
-                    margin: "-60px",
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: groupIndex * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
                   }}
+                  className="bg-zinc-900/30 border border-zinc-800/60 rounded-2xl p-6 hover:border-zinc-700 transition-colors duration-300"
                 >
                   {/* Category Title */}
-                  <p
-                    className={`font-mono text-xs uppercase tracking-widest text-zinc-500 mb-6 ${
-                      dir === "rtl" ? "text-right" : ""
-                    }`}
+                  <div
+                    className={`flex items-center gap-2 mb-6 ${dir === "rtl" ? "flex-row-reverse" : ""}`}
                   >
-                    {t.stack.categories[
-                      group as keyof typeof t.stack.categories
-                    ] || group}
-                  </p>
+                    <h3 className="font-mono text-sm uppercase tracking-widest text-zinc-300">
+                      {t.stack.categories[
+                        group as keyof typeof t.stack.categories
+                      ] || group}
+                    </h3>
+                    <div className="h-px flex-1 bg-zinc-800" />
+                  </div>
 
-                  {/* Skills */}
-                  <div className="space-y-5">
-                    {items.map((s) => (
-                      <div key={s.name} className="group">
-                        {/* Skill Name + Level */}
-                        <div
-                          className={`flex items-baseline justify-between mb-2 ${
-                            dir === "rtl" ? "flex-row-reverse" : ""
-                          }`}
+                  {/* Skills Pills */}
+                  <div className="flex flex-wrap gap-3">
+                    {items.map((skill, index) => {
+                      const Icon = skill.icon;
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.4,
+                            delay: groupIndex * 0.1 + index * 0.05,
+                            ease: [0.16, 1, 0.3, 1],
+                          }}
+                          whileHover={{ y: -4, scale: 1.03 }}
+                          className="group flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-900 transition-all duration-300 cursor-default shadow-sm hover:shadow-md hover:shadow-violet-500/5"
                         >
-                          <span className="text-sm text-zinc-300 group-hover:text-zinc-50 transition-colors duration-200">
-                            {s.name}
-                          </span>
-
-                          <span className="font-mono text-[11px] text-zinc-600 group-hover:text-zinc-500 transition-colors">
-                            {locale === "fa"
-                              ? s.level
-                                  .toString()
-                                  .replace(/\d/g, (d) =>
-                                    String.fromCharCode(1776 + parseInt(d)),
-                                  )
-                              : s.level}
-                            %
-                          </span>
-                        </div>
-
-                        {/* Progress Background */}
-                        <div className="h-1 rounded-full bg-zinc-900 overflow-hidden">
-                          <motion.div
-                            initial={{
-                              width: 0,
-                            }}
-                            whileInView={{
-                              width: `${s.level}%`,
-                            }}
-                            viewport={{
-                              once: true,
-                            }}
-                            transition={{
-                              duration: 0.9,
-                              ease: [0.16, 1, 0.3, 1],
-                            }}
-                            className="h-full rounded-full bg-linear-to-r from-violet-500 to-violet-300"
-                            style={{
-                              transformOrigin: dir === "rtl" ? "right" : "left",
-                            }}
+                          <Icon
+                            className={`w-5 h-5 transition-transform duration-300 ${skill.color} group-hover:scale-110`}
                           />
-                        </div>
-                      </div>
-                    ))}
+                          <span className="text-sm text-zinc-300 font-medium group-hover:text-zinc-100 transition-colors">
+                            {skill.name}
+                          </span>
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 </motion.div>
               ))}
